@@ -39,6 +39,7 @@ We additionally provide examplery trained weights in the `weights` folder if you
 They are trained on Town01, 03, 04, 06.
 Make sure you are launching CARLA with the `-vulkan` flag.
 
+Launch carla env `./CarlaUE4.sh -RenderOffScreen -quality-level=Epic -carla-rpc-port=2000 -carla-streaming-port=0 -nosound -opengl`
 
 Inside the root LAV repo, run
 ```bash
