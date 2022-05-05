@@ -1,6 +1,7 @@
 name: LAV-env
 channels:
   - pytorch
+  - conda-forge
   - anaconda
   - defaults
 dependencies:
@@ -11,6 +12,7 @@ dependencies:
   - pytorch=1.9.0
   - torchvision=0.10.0
   - cudatoolkit=11.1
+  - setuptools=49.6.0
   - pip:
     - dictor
     - lmdb

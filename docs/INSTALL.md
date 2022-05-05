@@ -27,13 +27,14 @@ Refer [here](https://docs.conda.io/projects/conda/en/4.6.0/user-guide/tasks/mana
 ```bash
 #!/bin/bash
 
-export CARLA_ROOT=[LINK TO YOUR CARLA FOLDER]
-export LEADERBOARD_ROOT=[LINK TO LAV REPO]/leaderboard
-export SCENARIO_RUNNER_ROOT=[LINK TO LAV REPO]/scenario_runner
-export PYTHONPATH="${CARLA_ROOT}/PythonAPI/carla/":"${SCENARIO_RUNNER_ROOT}":"${LEADERBOARD_ROOT}"
-export TEAM_AGENT=[LINK TO LAV REPO]/team_code/lav_agent.py
-export TEAM_CONFIG=[LINK TO LAV REPO]/team_code/config.yaml
-
+export CARLA_ROOT=/home/anthony/softwares/CARLA_0.9.10
+export LEADERBOARD_ROOT=/home/anthony/other_githubs/LAV/leaderboard
+export SCENARIO_RUNNER_ROOT=/home/anthony/other_githubs/LAV/scenario_runner
+export CARLA_AGENTS_ROOT=/home/anthony/other_githubs/LAV/carla_agents
+export CARLA_API="${CARLA_ROOT}/PythonAPI/carla/"
+export PYTHONPATH="${CARLA_API}":"${SCENARIO_RUNNER_ROOT}":"${LEADERBOARD_ROOT}":"${CARLA_AGENTS_ROOT}"
+export TEAM_AGENT=/home/anthony/other_githubs/LAV/team_code/lav_agent.py
+export TEAM_CONFIG=/home/anthony/other_githubs/LAV/team_code/config.yaml
 export SCENARIOS=${LEADERBOARD_ROOT}/data/all_towns_traffic_scenarios_public.json
 export REPETITIONS=1
 export CHECKPOINT_ENDPOINT=results.json
