@@ -131,4 +131,4 @@ dmypy.json
 .pyre/
 
 .idea/
-results.json
+results*.json

@@ -39,12 +39,11 @@ We additionally provide examplery trained weights in the `weights` folder if you
 They are trained on Town01, 03, 04, 06.
 Make sure you are launching CARLA with the `-vulkan` flag.
 
-Launch carla env `./CarlaUE4.sh -RenderOffScreen -quality-level=Epic -carla-rpc-port=<PORT> -carla-streaming-port=0 
--nosound -opengl`
+Launch carla env `/home/anthony/softwares/CARLA_0.9.10/CarlaUE4.sh -RenderOffScreen -quality-level=Epic -carla-rpc-port=<PORT> -carla-streaming-port=0 -nosound -opengl`
 
 Inside the root LAV repo, run
 ```bash
-./leaderboard/scripts/run_evaluation.sh <ROUTES_PATH> <PORT>
+bash run_benchmark.sh <ROUTES_PATH> <PORT>
 ```
 Use `ROUTES=assets/routes_lav_valid.xml` to run our ablation routes, or `ROUTES=leaderboard/data/routes_valid.xml` for the validation routes provided by leaderboard.
 
