@@ -10,6 +10,9 @@ traffic_port=$((PORT + 6000))
 checkpoint_filename="${ROUTES#*/}"
 checkpoint_filename="results_${checkpoint_filename%.*}_${PORT}.json"
 
+echo "Port ${PORT} and traffic port ${traffic_port}"
+echo "Saving results in ${checkpoint_filename}"
+
 python3 ${LEADERBOARD_ROOT}/leaderboard/leaderboard_evaluator.py \
 --scenarios=${SCENARIOS}  \
 --routes=${ROUTES} \

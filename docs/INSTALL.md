@@ -13,17 +13,11 @@ This doc provides instructions to get started.
 conda env create -f environment.yaml
 ```
 * Inside the conda environment, install the CARLA PythonAPI `easy_install [PATH TO CARLA EGG]`. Refer to [this link](https://leaderboard.carla.org/get_started/) if you are confused at this step.
-* Install [PyTorch](https://pytorch.org/get-started/locally/)
-* Install [torch-scatter](https://github.com/rusty1s/pytorch_scatter) based on your `CUDA` and `PyTorch` versions.
-* Setup [wandb](https://docs.wandb.ai/quickstart)
+* `conda install pytorch-scatter -c pyg`
 
 ## Configure environment variables
 
-**Note**: the following instructions only apply to Linux. For Windows follow [these instructions](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#windows) instead.
-
-Set the following environmental variables to your conda environment. 
-Refer [here](https://docs.conda.io/projects/conda/en/4.6.0/user-guide/tasks/manage-environments.html#saving-environment-variables) for instructions to do so.
-
+In your conda env set the following in [conda env source]/etc/conda/activate.d/env_vars.sh
 ```bash
 #!/bin/bash
 
@@ -37,7 +31,6 @@ export TEAM_AGENT=/home/anthony/other_githubs/LAV/team_code/lav_agent.py
 export TEAM_CONFIG=/home/anthony/other_githubs/LAV/team_code/config.yaml
 export SCENARIOS=${LEADERBOARD_ROOT}/data/all_towns_traffic_scenarios_public.json
 export REPETITIONS=1
-export CHECKPOINT_ENDPOINT=results.json
 export DEBUG_CHALLENGE=0
 export CHALLENGE_TRACK_CODENAME=SENSORS
 ```
