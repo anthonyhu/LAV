@@ -14,7 +14,7 @@ echo "Port ${PORT} and traffic port ${traffic_port}"
 echo "Saving results in ${checkpoint_filename}"
 
 python3 ${LEADERBOARD_ROOT}/leaderboard/leaderboard_evaluator.py \
---scenarios=${SCENARIOS}  \
+--scenarios="/home/anthony/other_githubs/LAV/no_scenarios.json"  \
 --routes=${ROUTES} \
 --repetitions=${REPETITIONS} \
 --track=${CHALLENGE_TRACK_CODENAME} \
