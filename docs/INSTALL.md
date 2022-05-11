@@ -5,15 +5,15 @@ This doc provides instructions to get started.
 ## Install CARLA
 * Install [git lfs](https://git-lfs.github.com/).
 * Download this repo `git clone --recurse-submodules git@github.com:dotchen/LAV.git`
-* Download and unzip [CARLA 0.9.10.1](https://github.com/carla-simulator/carla/releases/tag/0.9.10.1)
+* Download and unzip [CARLA 0.9.10.1](https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/CARLA_0.9.10.1.tar.gz)
 
 ## Install dependencies
 * First, inside the repo, create a dedicated conda environment. Refer [here](https://www.anaconda.com/products/individual#Downloads) if you do not have conda.
 ```
 conda env create -f environment.yaml
 ```
-* Inside the conda environment, install the CARLA PythonAPI `easy_install [PATH TO CARLA EGG]`. Refer to [this link](https://leaderboard.carla.org/get_started/) if you are confused at this step.
-* `conda install pytorch-scatter -c pyg`
+* Inside the conda environment, install the carla package `easy_install {CARLA_ROOT}/CARLA_0.9.10/PythonAPI/carla/dist/carla-0.9.10-py3.7-linux-x86_64.egg`.
+* Install pytorch-scatter `conda install pytorch-scatter -c pyg`
 
 ## Configure environment variables
 
