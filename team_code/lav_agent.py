@@ -1,12 +1,7 @@
-import os
-import math
 import yaml
 import numpy as np
-import cv2
 import torch
 import carla
-import random
-import string
 
 from torch.nn import functional as F
 
