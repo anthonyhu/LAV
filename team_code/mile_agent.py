@@ -1,4 +1,3 @@
-import torch
 import carla
 
 from leaderboard.autoagents.autonomous_agent import AutonomousAgent, Track
@@ -23,6 +22,5 @@ class MILEAgent(AutonomousAgent):
         # TODO clean up the agent
         pass
 
-    @torch.no_grad() # TODO: Is the decorator needed up here?
     def run_step(self, input_data, timestamp):
         return carla.VehicleControl(steer=0.0, throttle=0.0, brake=0.0)
