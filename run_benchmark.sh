@@ -10,11 +10,12 @@ traffic_port=$((PORT + 6000))
 checkpoint_filename="${ROUTES#*/}"
 checkpoint_filename="results_${checkpoint_filename%.*}_${PORT}.json"
 
+echo "Evaluating with scenarios"
 echo "Port ${PORT} and traffic port ${traffic_port}"
 echo "Saving results in ${checkpoint_filename}"
 
 python3 ${LEADERBOARD_ROOT}/leaderboard/leaderboard_evaluator.py \
---scenarios="/home/anthony/other_githubs/LAV/no_scenarios.json"  \
+--scenarios=${SCENARIOS}  \
 --routes=${ROUTES} \
 --repetitions=${REPETITIONS} \
 --track=${CHALLENGE_TRACK_CODENAME} \
