@@ -4,7 +4,7 @@ This doc provides instructions to get started.
 
 ## Install CARLA
 * Install [git lfs](https://git-lfs.github.com/).
-* Download this repo `git clone --recurse-submodules git@github.com:dotchen/LAV.git`
+* Download this repo `git clone --recurse-submodules git@github.com:anthonyhu/LAV.git`
 * Download and unzip [CARLA 0.9.10.1](https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/CARLA_0.9.10.1.tar.gz)
 
 ## Install dependencies
@@ -21,7 +21,7 @@ In your conda env set the following in [conda env source]/etc/conda/activate.d/e
 ```bash
 #!/bin/bash
 
-export CARLA_ROOT=/home/anthony/softwares/CARLA_0.9.10
+export CARLA_ROOT=/home/anthony/softwares/CARLA_0.9.10.1
 export LEADERBOARD_ROOT=/home/anthony/other_githubs/LAV/leaderboard
 export SCENARIO_RUNNER_ROOT=/home/anthony/other_githubs/LAV/scenario_runner
 export CARLA_AGENTS_ROOT=/home/anthony/other_githubs/LAV/carla_agents
