@@ -8,5 +8,6 @@
 
 2) Inside the root LAV repo, run
 ```bash
+conda activate LAV-env
 CUDA_VISIBLE_DEVICES=0 bash run_benchmark.sh assets/routes_lav_valid.xml 2000
 ```

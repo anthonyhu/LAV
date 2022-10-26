@@ -14,9 +14,6 @@ echo "Evaluating without scenarios"
 echo "Port ${PORT} and traffic port ${traffic_port}"
 echo "Saving results in ${checkpoint_filename}"
 
-source ~/miniconda3/etc/profile.d/conda.sh
-conda activate LAV-env
-
 python3 ${LEADERBOARD_ROOT}/leaderboard/leaderboard_evaluator.py \
 --scenarios="/home/anthony/other_githubs/LAV/no_scenarios.json"  \
 --routes=${ROUTES} \
