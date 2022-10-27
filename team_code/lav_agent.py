@@ -178,6 +178,11 @@ class LAVAgent(AutonomousAgent):
         rgb = np.concatenate(rgbs, axis=1)
         all_rgb = np.stack(rgbs, axis=0)
 
+        vis_path = '/home/anthony/experiments/lav_carla/vis'
+        os.makedirs(vis_path, exist_ok=True)
+        from PIL import Image
+        Image.fromarray(all_rgb).save(os.path.join(vis_path, f'{self.num_frames:06d}.png'))
+
         if self.waypointer is None:
 
             self.waypointer = Waypointer(
